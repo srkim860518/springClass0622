@@ -20,7 +20,7 @@
 			<label>남자</label>
 			<input type="radio" name="gender" id="female" value="female">
 			<label>여자</label><br>
-			<input type="submit" name="전송"><br>
+			<input type="submit" value="전송"><br>
 		</form>
 	</body>
 </html>

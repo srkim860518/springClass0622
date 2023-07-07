@@ -28,7 +28,7 @@ public class MemberController {
 		String hobby="";
 		for(int i=0;i<hobbys.length;i++) {
 			if(i==0) hobby +=hobbys[i];
-			else hobby +=","+hobbys[i];
+			else hobby +=","+hobbys[i];  //game,golf,run
 		}
 		System.out.println("hobby: "+hobby);
 		mdto.setHobby(hobby); //mdto객체 저장
@@ -45,8 +45,13 @@ public class MemberController {
 		return "member/updateMForm";
 	}
 	
+	@RequestMapping("/login")  //  
+	public String login() {
+		return "member/login";
+	}	
+	
 	@RequestMapping("/doLogin")
-	public String doLogin(@RequestParam(defaultValue = "aaa") String id,String pw,
+	public String doLogin(@RequestParam(required = false,defaultValue = "aaa") String id,String pw,
 			Model model) {
 		model.addAttribute("id",id);
 		model.addAttribute("pw",pw);		
